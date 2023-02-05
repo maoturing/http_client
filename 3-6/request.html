@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>POST请求x-www-form-urlencoded</title>
+</head>
+<body>
+<h1>form表单-post请求-application/x-www-form-urlencoded</h1>
+<h3>可以在echo_server中查看请求头和请求参数</h3>
+<h3>也可以在浏览器控制台载荷中选择查看源, 查看参数的编码结果</h3>
+<h3>也可以在Postman中构造当前请求, 选择Body-x-www-form-urlencoded, 填写参数即可</h3>
+
+<form action="http://localhost:18888" method="post" enctype="application/x-www-form-urlencoded">
+    title:<input name="title" value="three body"/>
+    author:<input name="author"  value="liu&zhang"/> 这里可以输入空格和&, 查看x-www-form-urlencoded对参数如何编码, 空格可能会被编码为%20或+<br>
+    file:<input type="file" name="story"/><br>
+    <input type="submit"/>
+</form>
+</body>
+</html>
