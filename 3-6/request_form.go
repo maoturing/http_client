@@ -17,7 +17,7 @@ func main() {
 	// 发送POST请求, 以form表单的形式传递参数, 参数不会在url中体现, 参数在请求体中, 默认contentType为x-www-form-urlencoded
 	resp, err := http.PostForm("http://localhost:18888", values)
 	// 与上面这行代码等价, 设置Content-Type为application/x-www-form-urlencoded, 对参数进行编码
-	// resp, err := http.Post("http://localhost:18888", "application/x-www-form-urlencoded", strings.NewReader(values.Encode())
+	// resp, err := http.Post("http://localhost:18888", "application/x-www-form-urlencoded", strings.NewReader(values.Encode()))
 
 	if err != nil {
 		panic(err)

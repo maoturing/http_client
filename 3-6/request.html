@@ -12,8 +12,8 @@
 
 <form action="http://localhost:18888" method="post" enctype="application/x-www-form-urlencoded">
     title:<input name="title" value="three body"/>
-    author:<input name="author"  value="liu&zhang"/> 这里可以输入空格和&, 查看x-www-form-urlencoded对参数如何编码, 空格可能会被编码为%20或+<br>
-    file:<input type="file" name="story"/><br>
+    author:<input name="author"  value="liu&zhang"/> 这里可以输入空格和&, 查看x-www-form-urlencoded对参数如何编码, 空格可能会被编码为%20或+ <br><br>
+    file:<input type="file" name="story"/> 并不会真的上传文件, 只是将story=a.txt参数放到请求体中, 并不传递文件. 想要传递文件, 需要将 enctype="multipart/form-data" <br><br>
     <input type="submit"/>
 </form>
 </body>
